@@ -65,15 +65,7 @@ RUN apt-get update && \
 USER myuser
 #installazione cmake
 
-RUN cd /tmp && \
-    wget https://github.com/Kitware/CMake/releases/download/v3.28.1/cmake-3.28.1.tar.gz && \
-    tar -zxvf cmake-3.28.1.tar.gz && \
-    cd cmake-3.28.1 && \
-    ./bootstrap && \
-    make && \
-    sudo make install \
-    && sudo apt install libc6-dev 
-   
+
 
 
 CMD ["tail", "-f", "/dev/null"]
